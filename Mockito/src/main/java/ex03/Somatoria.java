@@ -17,10 +17,10 @@ public class Somatoria {
         for (int i = 0; i < numeros.length; i++) {
             int numero = numeros[i];
             if (!p.ehPrimo(numero)) {
-                soma += numero;
+                soma += mathOps.fatorial(numero);
             }
         }
-        return 0;
+        return soma;
     }
-    // o metodo acima tem um bug; tente identificá-lo
+
 }
