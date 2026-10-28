@@ -10,6 +10,8 @@ Each topic has its own folder:
 
 - `JUnit/` – unit testing with JUnit
 - `Mockito/` – mocking dependencies with Mockito
+- `WhiteBox/` – white-box testing: control flow graphs, line and branch coverage
+- `Mutation/` – mutation testing
 
 Inside each topic, every exercise lives in its own package:
 
