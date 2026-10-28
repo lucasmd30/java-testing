@@ -29,6 +29,9 @@ class SomatoriaTest {
         int resultado = somatoria.somaDeFatoriais(v, primo);
 
         assertEquals(3628800, resultado);
+        verify(primo, times(2)).ehPrimo(anyInt());
+        verify(mathops).fatorial(10);
+        verify(mathops, never()).fatorial(5);
     }
 
     @Test
@@ -42,6 +45,10 @@ class SomatoriaTest {
         int resultado = somatoria.somaDeFatoriais(v, primo);
 
         assertEquals(48, resultado);
+        verify(primo, times(4)).ehPrimo(anyInt());
+        verify(mathops, times(2)).fatorial(4);
+        verify(mathops, never()).fatorial(3);
+        verify(mathops, never()).fatorial(5);
     }
 
 
